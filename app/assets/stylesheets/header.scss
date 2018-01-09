@@ -1,9 +1,22 @@
-.profile {
-  width: 30%;
-  max-width: 275px;
-  margin: auto;
+.nav > li {
+  text-align: center;
+}
 
-  img {
-    width: 100%;
-  }
+.profile {
+  width: 100%;
+  max-width: 275px;
+}
+
+.text {
+  margin-top: 10%;
+}
+
+/* overwriting defaults for bootstrap nav hover */
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $mint-detail;
+}
+
+.nav > li > a.img-link:hover, .nav > li > a.img-link:focus {
+  background-color: inherit;
+  opacity: 0.65;
 }
