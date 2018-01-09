@@ -20,3 +20,20 @@
   background-color: inherit;
   opacity: 0.65;
 }
+
+.twitter, .insta {
+  width: 35px;
+}
+
+.insta {
+  margin-right: 5px;
+}
+
+.social {
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    width: 40px;
+  }
+}
