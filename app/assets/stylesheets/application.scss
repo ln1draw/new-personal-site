@@ -16,10 +16,11 @@
 @import "bootstrap";
 @import "colors";
 @import "header";
+@import "welcome";
 
 body {
   width: 80%;
   margin: auto;
   margin-top: 25px;
-  background-color: $soft-mint;
+  background-color: $primary-color;
 }
