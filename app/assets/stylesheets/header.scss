@@ -1,27 +1,27 @@
 .nav > li {
   text-align: center;
 
-  
-}
+  a {
+    padding: 0px;
 
-.nav > li > a {
-  padding: 0px;
-}
+    img.profile {
+      width: 100%;
+      max-width: 275px;
+      border: 1px solid $black;
+    }
 
-.nav > li > a > img.profile {
-  width: 100%;
-  max-width: 275px;
-  border: 1px solid $black;
+    &:hover, &:focus {
+      background-color: $secondary-color;
+    }
+
+  }
+
 }
 
 .text {
   margin-top: 10%;
 }
 
-/* overwriting defaults for bootstrap nav hover */
-.nav > li > a:hover, .nav > li > a:focus {
-  background-color: $secondary-color;
-}
 
 .nav > li > a.img-link:hover, .nav > li > a.img-link:focus,
 .social > a > img:hover, .social > a > img:focus {
