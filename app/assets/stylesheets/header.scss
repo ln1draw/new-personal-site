@@ -1,10 +1,17 @@
 .nav > li {
   text-align: center;
+
+  
 }
 
-.profile {
+.nav > li > a {
+  padding: 0px;
+}
+
+.nav > li > a > img.profile {
   width: 100%;
   max-width: 275px;
+  border: 1px solid $black;
 }
 
 .text {
@@ -16,9 +23,16 @@
   background-color: $secondary-color;
 }
 
-.nav > li > a.img-link:hover, .nav > li > a.img-link:focus {
+.nav > li > a.img-link:hover, .nav > li > a.img-link:focus,
+.social > a > img:hover, .social > a > img:focus {
   background-color: inherit;
   opacity: 0.65;
+}
+
+@media only screen and (max-width : 768px) {
+  .nav > li > a.img-link {
+    padding: 0px;
+  }
 }
 
 .twitter, .insta {
