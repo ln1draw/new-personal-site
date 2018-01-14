@@ -3,11 +3,11 @@ class WelcomeController < ApplicationController
     @title = "Ellen Wondra"
   end
 
-  def about
-    @title = "About Ellen Wondra"
+  def resume
+    @title = "Resume | Ellen Wondra"
   end
 
   def contact
-    @title = "Contact Ellen Wondra"
+    @title = "Contact | Ellen Wondra"
   end
 end
