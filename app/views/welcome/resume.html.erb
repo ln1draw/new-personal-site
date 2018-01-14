@@ -1,6 +1,30 @@
-<div class="container full-width" ng-controller="ResumeController">
-  <div class="jumbotron">
-    <h1>About</h1>
-    <p>{{greeting}}</p>
+<div ng-controller="ResumeController">
+  <h1>Experience</h1>
+  <div class="row">
+    <span ng-repeat="experience in experiences" class="col-sm-4 xp-panel">
+      <div class="panel panel-default">
+        
+        <div class="panel-heading">
+          <div class="row">
+            <h5 class="h4">{{experience.title}}</h5>
+            |
+            <span>{{experience.company}}</span>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div class="date-wrapper h5">
+            {{experience.start_date}} - 
+            {{experience.end_date | date : "MMMM yyyy"}}
+          </div>
+          <ul class="list-inline">
+            <li ng-repeat="technology in experience.technologies">
+              {{technology}}
+              <span class="glyphicon glyphicon-asterisk" aria-hidden="true" ng-if="!$last"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </span>
   </div>
 </div>
