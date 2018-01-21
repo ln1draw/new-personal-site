@@ -1,7 +1,11 @@
 <div ng-controller="ResumeController">
   <h1>Experience</h1>
+  <div class="filter-selector form-group">
+    <label for="techFilterInput">Filter on technologies</label>
+    <input ng-model="techFilter.technologies" class="form-control" id="techFilterInput"/>
+  </div>
   <div class="row">
-    <span ng-repeat="experience in experiences" class="col-sm-4 xp-panel">
+    <span ng-repeat="experience in experiences | filter : techFilter" class="col-sm-4 xp-panel">
       <div class="panel panel-default">
         
         <div class="panel-heading">
@@ -24,6 +28,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </span>
   </div>
