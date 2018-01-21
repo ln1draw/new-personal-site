@@ -24,7 +24,7 @@ $coin-radius: 200px;
     }
 
     .face, .logo {
-      backface-visibility: hidden;
+      backface-visibility: visible;
 
       position: absolute;
       top: 0;
