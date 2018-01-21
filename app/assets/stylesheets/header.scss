@@ -1,53 +1,60 @@
-.nav > li {
+$coin-radius: 200px;
+
+.header {
   text-align: center;
+  margin-top: 25px;
+  font-family: $font-family-monospace;
 
-  a {
-    padding: 0px;
+  .pic-container {
+    height: $coin-radius;
+    width: $coin-radius;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: auto;
 
-    img.profile {
-      width: 100%;
-      max-width: 275px;
-      border: 1px solid $black;
+    perspective: 1000px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+
+    img {
+      opacity: .8;
+
     }
 
-    &:hover, &:focus {
-      background-color: $secondary-color;
+    .face, .logo {
+      backface-visibility: hidden;
+
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
+    .face {
+      width: $coin-radius;
+    }
+
+    .logo {
+      width: $coin-radius;
+      margin-top: 40px;
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+    }
   }
 
-}
+  .page-header {
+    margin-top: 0px;
+    border-bottom: none;
 
-.text {
-  margin-top: 10%;
-}
-
-
-.nav > li > a.img-link:hover, .nav > li > a.img-link:focus,
-.social > a > img:hover, .social > a > img:focus {
-  background-color: inherit;
-  opacity: 0.65;
-}
-
-@media only screen and (max-width : 768px) {
-  .nav > li > a.img-link {
-    padding: 0px;
+    h1 {
+      margin-top: 0px;
+    }
   }
 }
 
-.twitter, .insta {
-  width: 35px;
+.show {
+  transform: rotateY(180deg);
 }
 
-.insta {
-  margin-right: 5px;
-}
-
-.social {
-  text-align: center;
-  margin-top: 15px;
-
-  a {
-    width: 40px;
-  }
-}

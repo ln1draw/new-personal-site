@@ -1,18 +1,17 @@
-<div ng-controller="ResumeController">
+<div ng-controller="ResumeController" class="resume">
   <h1>Experience</h1>
   <div class="filter-selector form-group">
     <label for="techFilterInput">Filter on technologies</label>
     <input ng-model="techFilter.technologies" class="form-control" id="techFilterInput"/>
   </div>
-  <div class="row">
+  <div>
     <span ng-repeat="experience in experiences | filter : techFilter" class="col-sm-4 xp-panel">
       <div class="panel panel-default">
         
         <div class="panel-heading">
           <div class="row">
             <h5 class="h4">{{experience.title}}</h5>
-            |
-            <span>{{experience.company}}</span>
+            <span class="pull-right">{{experience.company}}</span>
           </div>
         </div>
 
@@ -21,10 +20,9 @@
             {{experience.start_date}} - 
             {{experience.end_date | date : "MMMM yyyy"}}
           </div>
-          <ul class="list-inline">
-            <li ng-repeat="technology in experience.technologies">
+          <ul class="list-inline technologies">
+            <li ng-repeat="technology in experience.technologies" class="badge">
               {{technology}}
-              <span class="glyphicon glyphicon-asterisk" aria-hidden="true" ng-if="!$last"></span>
             </li>
           </ul>
         </div>

@@ -1,38 +1,34 @@
-.xp-panel {
-  padding: 5px;
+.resume {
+  margin: 16px;
 
-  .panel {
-    height: 190px;
-
-    .panel-heading > .row {
-      padding-left: 5px;
-      padding-right: 5px;
-      text-align: center;
+  .panel.panel-default {
+    margin-bottom: 0px;
+    min-height: 130px;
+      
+    .panel-heading .row {
+      padding-left: 16px;
+      padding-right: 16px;
 
       h5 {
-        display: inline-block;
-        padding: 5px;
-      }
-
-      span {
-        padding: 5px;
+       display: inline;
       }
     }
 
     .panel-body {
-      padding: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
 
-      .date-wrapper {
-        text-align: center;
-        padding-bottom: 5px;
-      }
-
-      ul {
-        text-align: center;
+      .technologies {
         position: absolute;
-        bottom: 25px;
-        width: 95%;
+        bottom: 0px;
+        width: 100%;
+        min-width: 345px;
+
+        .badge {
+          margin: 1px;
+        }
       }
     }
+
   }
 }

@@ -1,4 +1,14 @@
-<navbar class="row">
+<div class="header">
+  <div class="row pic-container" ng-init="showFace = false" ng-click="showFace = !showFace" ng-class="{'show' : showFace}">
+    <img class="logo" src="logo.png" alt="logo {EW}" ng-show="!showFace">
+    <img class="face img-circle center-block profile" src="MYFACE.jpg" alt="image of the developer. link to homepage" ng-show="showFace">
+  </div>
+  <div class="page-header">
+      <h1>ellen wondra</h1>
+      <small>software engineer. pet herder. crafty.</small>
+  </div>
+</div>
+<!-- <navbar class="row">
   <ul class="nav">
     <li class="col-xs-3 col-sm-4 lead text"><a href="/resume" title="about page">Resume</a></li>
     <li class="col-xs-6 col-sm-4"><a href="/" title="home page" class="img-link">
@@ -11,4 +21,4 @@
     <a href="https://www.instagram.com/ln1draw/" target="__blank" title="Ellen's instagram"><img src="brands/insta-logo.png" class="insta"></a>
     <a href="https://twitter.com/ln1draw" target="__blank" title="Ellen's twitter"><img src="brands/twitter-logo.png" class="twitter"></a>
   </div>
-</navbar>
+</navbar> -->
