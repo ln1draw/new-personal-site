@@ -1,8 +1,13 @@
 <div class="header">
   <div class="row pic-container" ng-init="showFace = false" ng-click="showFace = !showFace" ng-class="{'show' : showFace}">
-    
-    <img class="logo" src="logo.png" alt="logo {EW}" ng-show="!showFace">
-    <img class="face img-circle center-block profile" src="MYFACE.jpg" alt="image of the developer. link to homepage" ng-show="showFace">
+
+    <div class="front">
+      <img class="logo" src="logo.png" alt="logo {EW}">
+    </div>
+
+    <div class="back">
+      <img class="face img-circle center-block profile" src="MYFACE.jpg" alt="image of the developer">
+    </div>
   </div>
   <div class="page-header">
       <h1>ellen wondra</h1>

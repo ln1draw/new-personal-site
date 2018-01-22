@@ -1,17 +1,19 @@
 $coin-radius: 200px;
+$border-width: 2px;
 
 .header {
   text-align: center;
   margin-top: 25px;
   font-family: $font-family-monospace;
+  perspective: 1000px;
 
   .pic-container {
-    height: $coin-radius;
-    width: $coin-radius;
+    height: $coin-radius + 2 * $border-width;
+    width: $coin-radius + 2 * $border-width;
+    border: $border-width solid $black;
     border-radius: 50%;
     margin: auto;
 
-    perspective: 1000px;
     transition: 1.8s;
     transform-style: preserve-3d;
 
@@ -22,12 +24,22 @@ $coin-radius: 200px;
 
     }
 
-    .face, .logo {
-      backface-visibility: visible;
+    .front, .back {
+      backface-visibility: hidden;
 
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    .front {
+      z-index: 2;
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+    }
+
+    .back {
+      transform: rotateY(180deg);
     }
 
     .face {
@@ -37,9 +49,6 @@ $coin-radius: 200px;
     .logo {
       width: $coin-radius;
       margin-top: 40px;
-      z-index: 2;
-      /* for firefox 31 */
-      transform: rotateY(0deg);
     }
   }
 
@@ -54,6 +63,6 @@ $coin-radius: 200px;
 }
 
 .show {
-  transform: rotateY(720deg);
+  transform: rotateY(900deg);
 }
 

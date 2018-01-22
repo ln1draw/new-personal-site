@@ -40,4 +40,25 @@
     transform: rotateY(180deg);
   }
 
+  .front, .back {
+    backface-visibility: hidden;
+  }
+
+  .front {
+    z-index: 2;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    z-index: 2;
+    position: absolute;
+    top: 5px;
+    left: 325px;
+  }
+
+  .badge {
+    backface-visibility: hidden;
+  }
+
+
 }
