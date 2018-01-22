@@ -16,5 +16,4 @@
 //= require angular
 //= require app
 //= require_tree ./angular_app
-//= require turbolinks
 //= require_tree .

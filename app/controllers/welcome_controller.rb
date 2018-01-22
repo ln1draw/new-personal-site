@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     @title = "Resume | Ellen Wondra"
   end
 
-  def contact
-    @title = "Contact | Ellen Wondra"
+  def links
+    @title = "Links | Ellen Wondra"
   end
 end
