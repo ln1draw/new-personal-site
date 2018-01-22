@@ -9,11 +9,10 @@ $coin-radius: 200px;
     height: $coin-radius;
     width: $coin-radius;
     border-radius: 50%;
-    border: 1px solid black;
     margin: auto;
 
     perspective: 1000px;
-    transition: 0.6s;
+    transition: 1.8s;
     transform-style: preserve-3d;
 
     position: relative;
@@ -55,6 +54,6 @@ $coin-radius: 200px;
 }
 
 .show {
-  transform: rotateY(180deg);
+  transform: rotateY(720deg);
 }
 

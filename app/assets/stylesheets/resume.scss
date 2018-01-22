@@ -4,6 +4,10 @@
   .panel.panel-default {
     margin-bottom: 0px;
     min-height: 130px;
+
+    perspective: 1000px;
+    transition: 1.8s;
+    transform-style: preserve-3d;
       
     .panel-heading .row {
       padding-left: 16px;
@@ -31,4 +35,9 @@
     }
 
   }
+
+  .panel-default.active {
+    transform: rotateY(180deg);
+  }
+
 }

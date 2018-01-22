@@ -1,5 +1,21 @@
 app.controller('ResumeController', ['$scope', function($scope) {
-  $scope.greeting = "hello world";
+  $scope.active = {};
+
+  $scope.toggleActive = function(title) {
+    if ($scope.active == title) {
+      $scope.active = {};
+    } else {
+      $scope.active = title;
+    }
+  }
+
+  $scope.isActive = function(title) {
+    if ($scope.active == title) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   $scope.experiences = [
     {
