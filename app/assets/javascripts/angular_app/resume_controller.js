@@ -1,16 +1,16 @@
 app.controller('ResumeController', ['$scope', function($scope) {
   $scope.active = {};
 
-  $scope.toggleActive = function(title) {
-    if ($scope.active == title) {
+  $scope.toggleActive = function(company) {
+    if ($scope.active == company) {
       $scope.active = {};
     } else {
-      $scope.active = title;
+      $scope.active = company;
     }
   }
 
-  $scope.isActive = function(title) {
-    if ($scope.active == title) {
+  $scope.isActive = function(company) {
+    if ($scope.active == company) {
       return true;
     } else {
       return false;

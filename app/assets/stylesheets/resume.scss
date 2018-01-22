@@ -1,6 +1,10 @@
 .resume {
   margin: 16px;
 
+  .xp-panel:hover {
+    opacity: 0.6;
+  }
+
   .panel.panel-default {
     margin-bottom: 0px;
     min-height: 130px;
@@ -27,6 +31,7 @@
         bottom: 0px;
         width: 100%;
         min-width: 345px;
+        padding-right: 15px;
 
         .badge {
           margin: 1px;
@@ -52,13 +57,29 @@
     transform: rotateY(180deg);
     z-index: 2;
     position: absolute;
-    top: 5px;
-    left: 325px;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    p {
+      backface-visibility: hidden;
+      margin: 10px 15px;
+      overflow: scroll;
+      height: 100px;
+    }
   }
 
   .badge {
     backface-visibility: hidden;
   }
 
+  @media only screen and (min-width: 768px) {
+    .subheader {
+      margin: 15px;
+    }
 
+    .xp-panel {
+      margin-bottom: 15px;
+    }
+  }
 }
