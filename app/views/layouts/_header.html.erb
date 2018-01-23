@@ -1,5 +1,5 @@
 <div class="header" ng-controller="HeaderController">
-  <div class="row pic-container" id="pic-container" ng-init="showFace = false" ng-click="showFace = !showFace" ng-class="{'show' : showFace}" ng-style="loadedStyle">
+  <div class="row pic-container" id="pic-container" ng-click="faceToggle()" ng-class="{'show' : showFace}" ng-style="loadedStyle">
 
     <div class="front" ng-init="loaded = true">
       <img class="logo" src="logo.png" alt="logo {EW}">
