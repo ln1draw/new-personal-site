@@ -1,5 +1,5 @@
-$coin-radius: 200px;
-$border-width: 1px;
+$coin-diameter: 200px;
+$border-width: 3px;
 
 .header {
   text-align: center;
@@ -8,8 +8,8 @@ $border-width: 1px;
   perspective: 1000px;
 
   .pic-container {
-    height: $coin-radius + 2 * $border-width;
-    width: $coin-radius + 2 * $border-width;
+    height: $coin-diameter + 2 * $border-width;
+    width: $coin-diameter + 2 * $border-width;
     border: $border-width solid $black;
     border-radius: 50%;
     margin: auto;
@@ -39,6 +39,14 @@ $border-width: 1px;
       z-index: 2;
       /* for firefox 31 */
       transform: rotateY(0deg);
+
+      background-color: rgba(245,245,245,.7);
+      height: $coin-diameter;
+      width: $coin-diameter;
+      border-radius: 50%;
+
+
+
     }
 
     .back {
@@ -46,11 +54,11 @@ $border-width: 1px;
     }
 
     .face {
-      width: $coin-radius;
+      width: $coin-diameter;
     }
 
     .logo {
-      width: $coin-radius;
+      width: $coin-diameter;
       margin-top: 40px;
     }
   }

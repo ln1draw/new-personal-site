@@ -21,5 +21,6 @@
 @import "links";
 
 body {
-  background-color: $background;
+    background-color: $background;
+    -webkit-transform-style: preserve-3d;
 }
