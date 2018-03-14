@@ -9,6 +9,7 @@
   .panel.panel-default {
     margin-bottom: 0px;
     min-height: 130px;
+    border: 1px solid $black;
 
     perspective: 1000px;
     transition: 1.8s;
@@ -72,6 +73,10 @@
 
   .badge {
     backface-visibility: hidden;
+  }
+
+  .search {
+    border: 1px solid $black;
   }
 
   @media only screen and (min-width: 768px) {

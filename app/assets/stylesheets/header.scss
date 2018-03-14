@@ -1,5 +1,5 @@
 $coin-radius: 200px;
-$border-width: 2px;
+$border-width: 1px;
 
 .header {
   text-align: center;
@@ -78,6 +78,7 @@ $border-width: 2px;
         a {
           width: 100px;
           margin: auto;
+          color: $secondary;
 
           &:hover {
             background-color: inherit;
