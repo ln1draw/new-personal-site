@@ -8,11 +8,20 @@
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <% if @blog %>
+      <%= stylesheet_link_tag    "monologue/blog/application" %>
+    <% end %>
     <%= javascript_include_tag 'application'%>
   </head>
 
   <body ng-app="app">
     <%= render 'layouts/header' %>
     <%= yield %>
+
+    <% if @blog %>
+      <%= render 'layouts/monologue/application/sidebar' %>
+      <%= render 'layouts/monologue/application/disqus' %>
+    <% end %>
+
   </body>
 </html>
