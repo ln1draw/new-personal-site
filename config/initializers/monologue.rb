@@ -8,7 +8,7 @@ Monologue.config do |config|
 
   config.admin_force_ssl = false
   config.posts_per_page = 10
-  config.preview_size = 1000
+  config.preview_size = 750
 
   config.disqus_shortname = "ln1draw"
 
