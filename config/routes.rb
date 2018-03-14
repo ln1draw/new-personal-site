@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'resume', to: 'welcome#resume'
   get 'links', to: 'welcome#links'
 
+  get 'blog', to: 'blog#index'
+  get 'blog/:id', to: 'blog#show'
+
   root 'welcome#index'
   match "*path", to: redirect('/'), via: :all
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
