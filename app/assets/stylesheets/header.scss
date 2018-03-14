@@ -25,6 +25,9 @@ $border-width: 2px;
     }
 
     .front, .back {
+      -webkit-perspective: 0;
+      -webkit-backface-visibility: hidden;
+      -webkit-transform: translate3d(0,0,0);
       backface-visibility: hidden;
 
       position: absolute;
