@@ -10,4 +10,8 @@ class WelcomeController < ApplicationController
     def links
         @title = "Links | Ellen Wondra"
     end
+
+    def blog
+        @title = "Blog | Ellen Wondra"
+    end
 end
