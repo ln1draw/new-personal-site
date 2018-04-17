@@ -36,7 +36,7 @@ app.controller('HeaderController', ['$scope', '$timeout', '$http', '$cookies', '
       $scope.showBanner = true;
       $cookies.put('sawBanner', today)
     }
-  }, 1500)
+  }, 5000)
 
   updateBannerStyle = function() {
     console.log($window.pageYOffset)
