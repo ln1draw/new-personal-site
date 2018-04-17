@@ -104,3 +104,20 @@ $border-width: 3px;
 .show {
   transform: rotateY(900deg);
 }
+
+.banner {
+  position: fixed;
+  width: 100%;
+  top: 15px;
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+}
+.controls-fixed{
+  bottom:0;
+  left:0;
+  padding:10px 15px;
+  position:fixed;
+  top:auto;
+  width:100%;
+}

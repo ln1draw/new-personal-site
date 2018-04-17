@@ -1,7 +1,9 @@
-app.controller('HeaderController', ['$scope', '$timeout', '$http', function($scope, $timeout, $http) {
+app.controller('HeaderController', ['$scope', '$timeout', '$http', '$cookies', '$window', function($scope, $timeout, $http, $cookies, $window) {
   $scope.loadedStyle = {};
   $scope.showFace = false;
   $scope.count = 0
+  $scope.showBanner = false;
+  $scope.bannerStyle = {top: '10px'}
 
   $http.get('/counter/show').then( function(response) { $scope.count = response.data.clicks }, function(response){} )
 
@@ -25,4 +27,26 @@ app.controller('HeaderController', ['$scope', '$timeout', '$http', function($sco
   addFaceCount = function() {
     $http.get('/counter/add_one').then( function(response) { $scope.count = response.data.clicks } );
   }
+
+  $timeout(function() {
+    cookie = $cookies.get('sawBanner')
+    today = new Date
+    diff = today - parseInt(cookie)
+    if ( (cookie == null) || ( Math.ceil(diff / (1000 * 3600 * 24)) > 1)){
+      $scope.showBanner = true;
+      $cookies.put('sawBanner', today)
+    }
+  }, 1500)
+
+  updateBannerStyle = function() {
+    console.log($window.pageYOffset)
+    $scope.bannerStyle = {top: $window.pageYOffset + 'px'}
+  }
+
+  angular.element($window).bind("scroll", function() {
+    if($scope.showBanner){
+      updateBannerStyle();
+      $scope.$apply();
+    }
+  });
 }]);
