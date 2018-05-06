@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'resume', to: 'welcome#resume'
   get 'links', to: 'welcome#links'
 
+  get 'stitchify', to: 'stitchify#index'
+  post 'stitchify', to: 'stitchify#create'
+
   mount Monologue::Engine, at: '/blog'
 
   root 'welcome#index'

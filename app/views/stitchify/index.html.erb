@@ -1,0 +1,27 @@
+<div class="container full-width well stitchify" ng-controller="StitchifierController">
+  <h2>Stitchify</h2>
+  <p> Ever wanted a cross-stitched ASCII-art version of your face? </p>
+
+  <p> Yeah, me too. That's why I made Stitchify! </p>
+
+  <p> Stitchify takes a picture you select, converts it to ASCII art, and then converts that ASCII art to a cross-stitch pattern! It's still a work in progress (accepting PRs <a href="https://github.com/ln1draw/stitchify" target="__blank" alt="github repo for the project">here</a>) but it's pretty fun! Select a number of ASCII characters and a picture and check it in action!</p>
+
+  <p><h5>A note on privacy:</h5></p>
+  <p>No picture you upload is saved for longer than it takes to generate the cross-stitch pattern. That being said, there are a lot of malicious people out there, and frankly, this is a fun project I do in my free time; I'm not devoting much time or thought to security. I do not recommend that you stitchify anything sensitive, because, you know, the internet.</p>
+
+  <p>
+    <%= form_for @stitchpic, url: {action: "create"} do |f| %>
+      <div class="form-group">
+        <%= f.label :ascii_width, 'Number of characters per line:' %>
+        <span class="clearfix"></span>
+        <%= f.number_field :ascii_width %>
+      </div>
+      <div class="form-group">
+        <%= f.label :picture, 'Picture to stitch:' %>
+        <%= f.file_field :picture %>
+      </div>
+
+      <%= f.submit 'Stitchify!' %>
+    <% end %>
+  </p>
+</div>
