@@ -15,7 +15,6 @@
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-cookies
-//= require angularjs-file-upload
 //= require app
 //= require_tree ./angular_app
 //= require_tree .

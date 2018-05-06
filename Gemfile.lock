@@ -38,7 +38,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    angularjs-file-upload-rails (2.4.1)
     angularjs-rails (1.6.8)
     arel (7.1.4)
     asciiart (0.0.9)
@@ -215,7 +214,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angularjs-file-upload-rails (~> 2.4.1)
   angularjs-rails
   bootstrap-sass (~> 3.3.7)
   byebug

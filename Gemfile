@@ -24,7 +24,6 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'angularjs-rails'
-gem 'angularjs-file-upload-rails', '~> 2.4.1'
 gem 'carrierwave'
 
 # blogging gem
