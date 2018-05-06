@@ -1,0 +1,30 @@
+.stitchify {
+  border: 1px solid black;
+
+  a {
+    color: $secondary;
+  }
+
+  h5 {
+    color: $secondary;
+  }
+}
+
+.stitchify-results {
+  width: 82.5%;
+  margin: auto;
+  a {
+    color: $secondary;
+  }
+
+  h5 {
+    color: $secondary;
+  }
+
+  .svg-background {
+    background-color: $white;
+    width: fit-content;
+    border: 1px solid $black;
+    margin: auto;
+  }
+}
