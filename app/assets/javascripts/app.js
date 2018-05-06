@@ -1,1 +1,1 @@
-var app = angular.module('app', ['ngCookies', 'angularFileUpload']);
+var app = angular.module('app', ['ngCookies']);

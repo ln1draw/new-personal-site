@@ -1,4 +1,4 @@
-app.controller('StitchifierController', ['$scope', '$http', function($scope, $http, FileUploader) {
+app.controller('StitchifierController', ['$scope', '$http', function($scope, $http) {
   var csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
   $scope.ascii_width = 50;
