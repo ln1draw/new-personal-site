@@ -233,6 +233,7 @@ DEPENDENCIES
   pry
   puma (~> 3.0)
   rails (~> 5.0.2)
+  rmagick (~> 2.16.0)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
