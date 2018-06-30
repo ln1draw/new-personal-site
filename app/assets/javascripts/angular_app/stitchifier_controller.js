@@ -11,6 +11,7 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
   console.log("hey what's up")
 
   $scope.submit = function() {
+    console.log("in the submit")
     $scope.loading = true;
     var req = {
       method: 'GET',
