@@ -5,6 +5,7 @@ app.controller('HeaderController', ['$scope', '$timeout', '$http', '$cookies', '
   $scope.showBanner = false;
   $scope.bannerStyle = {top: '10px'}
 
+
   $http.get('/counter/show').then( function(response) { $scope.count = response.data.clicks }, function(response){} )
 
   $timeout(function() {

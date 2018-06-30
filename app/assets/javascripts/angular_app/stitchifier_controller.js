@@ -1,21 +1,26 @@
-app.controller('StitchifierController', ['$scope', '$http', function($scope, $http) {
-  var csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+app.controller('StitchifierController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
+  // var csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-  $scope.ascii_width = 50;
+  $scope.width = 50;
+  $scope.url = 'http://www.ellenwondra.com/MYFACE.jpg'
+  $scope.results = ''
+  $scope.loading = false;
 
   $scope.submit = function() {
+    $scope.loading = true;
     var req = {
-      method: 'POST',
-      url: '/stitchify',
+      method: 'GET',
+      url: '/stitchify/svg',
       params: {
-        ascii_width: $scope.ascii_width,
-        file: $scope.file
+        width: $scope.width,
+        url: $scope.url
       }
     }
-    $http(req).then(function(){
-
+    $http(req).then(function(res){
+      $scope.results = $sce.trustAsHtml(res['data']['svg'])
+      $scope.loading = false;
     }, function() {
-
+      $scope.loading = false;
     })
   }
 }]);

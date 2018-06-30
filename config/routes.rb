@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'links', to: 'welcome#links'
 
   get 'stitchify', to: 'stitchify#index'
-  post 'stitchify', to: 'stitchify#create'
+  get 'stitchify/svg', to: 'stitchify#svg'
 
   mount Monologue::Engine, at: '/blog'
 

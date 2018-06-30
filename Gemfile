@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'stitchify', '~> 0.1.3'
+gem 'stitchify', '~> 0.2.6'
 
 gem 'pry'
 group :development, :test do
