@@ -8,6 +8,8 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
   $scope.num_of_colors = 6;
   $scope.custom_colors = '';
 
+  console.log("hey what's up")
+
   $scope.submit = function() {
     $scope.loading = true;
     var req = {
