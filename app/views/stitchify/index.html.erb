@@ -15,15 +15,24 @@
       <form>
         <div class="form-group">
           <label for="url">Email address</label>
-          <input type="text" class="form-control" id="url" aria-describedby="emailHelp" placeholder="http://www.ellenwondra.com/MYFACE.jpg" ng-model="url">
+          <input type="text" class="form-control" id="url" placeholder="http://www.ellenwondra.com/MYFACE.jpg" ng-model="url">
         </div>
         <div class="form-group">
           <label for="width">Width</label>
-          <input type="text" class="form-control" id="width" placeholder="50" ng-model="width">
+          <input type="number" class="form-control" id="width" placeholder="50" ng-model="width">
+        </div>
+        <div class="form-group">
+          <label for="num_of_colors">Number of colors:</label>
+          <input type="number" class="form-control" id="num_of_colors" placeholder="6" ng-model="num_of_colors">
+        </div>
+        <div class="form-group">
+          <label for="custom_colors">Custom colors (in hex, separated by commas and spaces):</label>
+          <input type="text" class="form-control" id="custom_colors" placeholder="#ff0000, #0000ff, #ffff00" ng-model="custom_colors">
         </div>
         <button type="submit" class="btn btn-primary" ng-click="submit()">Submit</button>
       </form>
     </div>
+
     <div class="col-sm-8 svg-wrapper">
       <h5 ng-show="loading">{...loading...}</h5>
       <span ng-bind-html="results"></span>

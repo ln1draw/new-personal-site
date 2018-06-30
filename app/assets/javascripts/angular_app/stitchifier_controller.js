@@ -5,6 +5,8 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
   $scope.url = 'http://www.ellenwondra.com/MYFACE.jpg'
   $scope.results = ''
   $scope.loading = false;
+  $scope.num_of_colors = 6;
+  $scope.custom_colors = '';
 
   $scope.submit = function() {
     $scope.loading = true;
@@ -13,7 +15,9 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
       url: '/stitchify/svg',
       params: {
         width: $scope.width,
-        url: $scope.url
+        url: $scope.url,
+        num_of_colors: $scope.num_of_colors,
+        custom_colors: $scope.custom_colors
       }
     }
     $http(req).then(function(res){
