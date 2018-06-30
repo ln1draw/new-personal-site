@@ -1,5 +1,5 @@
 class StitchifyController < ApplicationController
-  require 'tempfile'
+  require 'RMagick'
   def index
     
   end
