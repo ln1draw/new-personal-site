@@ -1,4 +1,8 @@
 class WelcomeController < ApplicationController
+    def blog
+        @title = "Blog | Ellen Wondra"
+    end
+
     def index
         @title = "Ellen Wondra"
     end
@@ -11,7 +15,7 @@ class WelcomeController < ApplicationController
         @title = "Links | Ellen Wondra"
     end
 
-    def blog
-        @title = "Blog | Ellen Wondra"
+    def qrstitch
+        @title = "QR from Cross - Stitch | Ellen Wondra"
     end
 end

@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   get 'counter/show'
 
   get 'welcome/index'
-  get 'resume', to: 'welcome#resume'
-  get 'links', to: 'welcome#links'
 
-  get 'stitchify', to: 'stitchify#index'
-  get 'stitchify/svg', to: 'stitchify#svg'
+  get 'resume',          to: 'welcome#resume'
+  get 'links',           to: 'welcome#links'
+  get 'qr-cross-stitch', to: 'welcome#qrstitch'
+  get 'stitchify',       to: 'stitchify#index'
+  get 'stitchify/svg',   to: 'stitchify#svg'
 
   mount Monologue::Engine, at: '/blog'
 

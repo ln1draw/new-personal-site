@@ -25,3 +25,10 @@ body {
     background-color: $background;
     -webkit-transform-style: preserve-3d;
 }
+
+.money-banner a {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
