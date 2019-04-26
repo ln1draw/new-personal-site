@@ -1,5 +1,5 @@
 $coin-diameter: 200px;
-$border-width: 3px;
+$border-width: 4px;
 
 .header {
   text-align: center;
@@ -21,7 +21,7 @@ $border-width: 3px;
     position: relative;
 
     img {
-      opacity: .8;
+      
 
     }
 
@@ -55,7 +55,7 @@ $border-width: 3px;
     }
 
     .face {
-      width: $coin-diameter;
+      width: $coin-diameter + 1;
     }
 
     .logo {

@@ -2,6 +2,10 @@
     border: 1px solid $black
 }
 
+.qr-img {
+  max-width: 300px;
+}
+
 @media only screen and (max-width: 768px) {
   .welcome {
     margin-left: 15px;
