@@ -12,7 +12,9 @@ class StitchifyController < ApplicationController
     color_arr = []
     color_arr = custom.split(', ') if !custom.blank?
     puts '-------about to make a stitchifier'
+    puts 'url is ' + url
     s = Stitchifier.new(url, width, 10, colors)
+    puts '-------stitchifier exists'
     s.build_color_set(color_arr) if color_arr.length > 0
     puts '-------about to drawrasem'
     d = Stitchifier::DrawRasem.new(s.stitch_map, s.width, s.px, s.color_set)
