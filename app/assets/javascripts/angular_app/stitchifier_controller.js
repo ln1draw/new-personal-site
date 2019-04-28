@@ -8,8 +8,6 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
   $scope.num_of_colors = 6;
   $scope.custom_colors = '';
 
-  console.log("hey what's up")
-
   $scope.submit = function() {
     console.log("in the submit")
     $scope.loading = true;
@@ -23,11 +21,14 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', function($sc
         custom_colors: $scope.custom_colors
       }
     }
+    console.log("made the req obj")
     $http(req).then(function(res){
       $scope.results = $sce.trustAsHtml(res['data']['svg'])
       $scope.loading = false;
+      console.log("in the success block")
     }, function() {
       $scope.loading = false;
+      console.log("in the failure block")
     })
   }
 }]);
