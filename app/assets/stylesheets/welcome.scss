@@ -6,6 +6,15 @@
   max-width: 300px;
 }
 
+.link-container {
+  .crowdfunding {
+    a {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .welcome {
     margin-left: 15px;

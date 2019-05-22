@@ -15,6 +15,10 @@ class WelcomeController < ApplicationController
         @title = "Links | Ellen Wondra"
     end
 
+    def music
+        @title = "Music | Ellen Wondra"
+    end
+
     def qrstitch
         @title = "QR from Cross - Stitch | Ellen Wondra"
     end

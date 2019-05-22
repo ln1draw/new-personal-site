@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'resume',          to: 'welcome#resume'
   get 'links',           to: 'welcome#links'
+  get 'music',           to: 'welcome#music'
   get 'qr-cross-stitch', to: 'welcome#qrstitch'
   get 'stitchify',       to: 'stitchify#index'
   get 'stitchify/svg',   to: 'stitchify#svg'
