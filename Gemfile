@@ -11,7 +11,7 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 
 gem 'bootstrap-sass', '~> 3.3.7'
 
