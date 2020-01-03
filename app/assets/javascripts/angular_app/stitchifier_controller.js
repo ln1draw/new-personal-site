@@ -1,12 +1,13 @@
-app.controller('StitchifierController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
+app.controller('StitchifierController', ['$scope', '$http', '$sce', '$location', function($scope, $http, $sce, $location) {
   // var csrf_token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
   $scope.width = 50;
-  $scope.url = 'http://www.ellenwondra.com/gothprincess.jpg'
+  $scope.host = 'http://www.ellenwondra.com/gothprincess.jpg'
   $scope.results = ''
   $scope.loading = false;
   $scope.num_of_colors = 10;
   $scope.custom_colors = '';
+  $scope.host = $location.host();
 
   $scope.submit = function() {
     $scope.loading = true;
