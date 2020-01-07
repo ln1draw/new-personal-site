@@ -4,7 +4,7 @@
 
   <p> Yeah, me too. That's why I made Stitchify! </p>
 
-  <p> Stitchify takes a picture you select and turns it into a cross-stitch pattern! It's still a work in progress (accepting PRs <a href="https://github.com/ln1draw/stitchify" target="__blank" alt="github repo for the project">here</a>) but it's pretty fun! Select a width in number of squares and a picture and check it in action!</p>
+  <p> Stitchify takes a picture you select and turns it into a cross-stitch pattern! It's still a work in progress (accepting PRs <a class="pr" href="https://github.com/ln1draw/stitchify" target="__blank" alt="github repo for the project">here</a>) but it's pretty fun! Select a width in number of squares and a picture and check it in action!</p>
 
   <p><h5>A note on privacy:</h5></p>
   <p>No picture you submit is saved while generating the cross-stitch pattern. That being said, there are a lot of malicious people out there, and frankly, this is a fun project I do in my free time; I'm not devoting much time or thought to security. I do not recommend that you stitchify anything sensitive, because, you know, the internet!</p>
@@ -18,11 +18,11 @@
           <input type="text" class="form-control" id="url" placeholder="http://www.ellenwondra.com/gothprincess.jpg" ng-model="url">
         </div>
         <div class="form-group">
-          <label for="width">Width</label>
+          <label for="width">Width (max - 100):</label>
           <input type="number" class="form-control" id="width" placeholder="50" ng-model="width">
         </div>
         <div class="form-group">
-          <label for="num_of_colors">Number of colors:</label>
+          <label for="num_of_colors">Number of colors (max - 15):</label>
           <input type="number" class="form-control" id="num_of_colors" placeholder="4" ng-model="num_of_colors">
         </div>
         <div class="form-group">

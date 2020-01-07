@@ -10,6 +10,13 @@ app.controller('StitchifierController', ['$scope', '$http', '$sce', '$location',
 
   $scope.submit = function() {
     $scope.loading = true;
+    if ($scope.width > 100) {
+
+      $scope.width = 100
+    }
+    if ($scope.num_of_colors > 15) {
+      $scope.num_of_colors = 15
+    }
     var req = {
       method: 'GET',
       url: '/stitchify/svg',

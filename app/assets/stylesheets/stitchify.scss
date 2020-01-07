@@ -3,6 +3,10 @@
 
   a {
     color: $white;
+    
+    &.pr {
+      color: $background;
+    }
   }
 
   h5 {
