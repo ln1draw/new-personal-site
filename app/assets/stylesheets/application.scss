@@ -20,10 +20,15 @@
 @import "resume";
 @import "links";
 @import "stitchify";
+@import "monologue/blog/custom";
 
 body {
     background-color: $background;
     -webkit-transform-style: preserve-3d;
+}
+
+.bordered {
+  border: $border-width solid $black;
 }
 
 .money-banner a {
@@ -31,4 +36,11 @@ body {
   display: inline-block;
   text-align: center;
   margin-top: 10px;
+}
+
+.footer {
+  .footer-header {
+    text-align: center;
+    margin: 20px;
+  }
 }
