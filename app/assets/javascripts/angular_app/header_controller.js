@@ -1,4 +1,4 @@
-app.controller('HeaderController', ['$scope', '$timeout', '$http', '$cookies', '$window', function($scope, $timeout, $http, $cookies, $window) {
+app.controller('HeaderController', ['$scope', '$timeout', '$http', '$window', function($scope, $timeout, $http, $window) {
   $scope.loadedStyle = {};
   $scope.showFace = false;
   $scope.count = 0
@@ -29,18 +29,7 @@ app.controller('HeaderController', ['$scope', '$timeout', '$http', '$cookies', '
     $http.get('/counter/add_one').then( function(response) { $scope.count = response.data.clicks } );
   }
 
-  $timeout(function() {
-    cookie = $cookies.get('sawBanner')
-    today = new Date
-    diff = today - parseInt(cookie)
-    if ( (cookie == null) || ( Math.ceil(diff / (1000 * 3600 * 24)) > 1)){
-      $scope.showBanner = true;
-      $cookies.put('sawBanner', today)
-    }
-  }, 5000)
-
   updateBannerStyle = function() {
-    console.log($window.pageYOffset)
     $scope.bannerStyle = {top: $window.pageYOffset + 'px'}
   }
 
