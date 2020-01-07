@@ -6,18 +6,6 @@
 
   <p> Stitchify takes a picture you select and turns it into a cross-stitch pattern! It's still a work in progress (accepting PRs <a href="https://github.com/ln1draw/stitchify" target="__blank" alt="github repo for the project">here</a>) but it's pretty fun! Select a width in number of squares and a picture and check it in action!</p>
 
-  <div ng-if="host == 'ellenwondra.com' || true">
-    <h5 class="note">AN IMPORTANT NOTE:</h5>
-  
-    <p>For complex reasons that I don't fully understand because devops is not my forte and frankly, this is a silly side project that I don't want to devote this much brain power to (SO MANY LITERAL HOURS AT THIS POINT), this tool is up and working at 
-      <a href="http://site-cedar.herokuapp.com/stitchifier"><button type="button" class="btn btn-primary">site-cedar.herokuapp.com/stitchifier</button></a>
-    </p>
-
-    <p>I have spent many literal hours trying to fix this problem.</p>
-
-    <p>Then I thought about it, and realized that in all honesty, it isn't actually worth resolving. I don't *care* that it's hosted on a site with an ugly url; I'm proud of what I made and I am not excited about the problem of prettying up the URL, and I am the PM of my own life, so I get to decide which problems are not worth my time :D</p>
-  </div>
-
   <p><h5>A note on privacy:</h5></p>
   <p>No picture you submit is saved while generating the cross-stitch pattern. That being said, there are a lot of malicious people out there, and frankly, this is a fun project I do in my free time; I'm not devoting much time or thought to security. I do not recommend that you stitchify anything sensitive, because, you know, the internet!</p>
 
@@ -39,7 +27,7 @@
         </div>
         <div class="form-group">
           <label for="custom_colors">Custom colors (in hex, separated by commas and spaces):</label>
-          <input type="text" class="form-control" id="custom_colors" placeholder=" #f40234, #f0882f, #688b2e, #013f73" ng-model="custom_colors">
+          <input type="text" class="form-control" id="custom_colors" placeholder=" #ffc0cb, #0d98ba, #00ff00, #013f73" ng-model="custom_colors">
         </div>
         <button type="submit" class="btn btn-primary" ng-click="submit()">Submit</button>
       </form>
