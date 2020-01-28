@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180429190250) do
+ActiveRecord::Schema.define(version: 20190827203147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,23 @@ ActiveRecord::Schema.define(version: 20180429190250) do
     t.integer  "clicks"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", id: :bigserial, force: :cascade do |t|
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "name"
+    t.text     "blurb"
+    t.string   "citation"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "pretty_address"
+    t.string   "email_address"
+    t.text     "email_suggestion"
+    t.text     "street"
+    t.text     "city"
+    t.text     "state"
+    t.text     "country"
   end
 
   create_table "monologue_posts", force: :cascade do |t|
