@@ -41,7 +41,7 @@ gem 'jbuilder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'stitchify', '~> 0.2.8'
+gem 'stitchify', '~> 0.3.0'
 gem 'rmagick'
 
 gem 'pry'
