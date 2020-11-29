@@ -4,6 +4,7 @@ $border-width: 4px;
 .header {
   text-align: center;
   margin-top: 25px;
+  margin-bottom: 10px;
   font-family: $font-family-monospace;
   perspective: 1000px;
 
@@ -20,9 +21,8 @@ $border-width: 4px;
 
     position: relative;
 
-    img {
-      
-
+    &:hover {
+      cursor: pointer;
     }
 
     .front, .back {

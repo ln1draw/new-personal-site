@@ -1,5 +1,28 @@
 .welcome {
-    border: 1px solid $black
+  div {
+    border: 4px solid $black;
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    h5 {
+      font-size: 20px;
+    }
+
+    .img-wrapper {
+      display: block;
+      margin: auto;
+      width: fit-content;
+      img {
+        max-width: 600px;
+        max-height: 600px;
+        display: inline-block;
+        margin: auto;
+        border: 4px solid $black;
+      }
+    }
+  }
 }
 
 .qr-img {
